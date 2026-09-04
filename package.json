@@ -1,0 +1,56 @@
+{
+  "name": "privacy-messenger",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:check": "node scripts/check-migration.mjs",
+    "auth:check": "node scripts/test-auth.mjs",
+    "profile:check": "node scripts/test-profile.mjs",
+    "realtime": "tsx scripts/ws-server.ts",
+    "realtime:check": "node scripts/test-realtime.mjs",
+    "presence:check": "node scripts/test-presence.mjs",
+    "attachment:check": "node scripts/test-attachments.mjs",
+    "message-state:check": "node scripts/test-message-states.mjs",
+    "message-feature:check": "node scripts/test-message-features.mjs",
+    "notification:check": "node scripts/test-notifications.mjs",
+    "search:check": "node scripts/test-search.mjs",
+    "security:check": "node scripts/test-security-review.mjs",
+    "test:unit": "node scripts/test-unit.mjs",
+    "test:integration": "node scripts/test-integration.mjs",
+    "test:e2e": "playwright test",
+    "test": "node scripts/test-all.mjs",
+    "test:all": "node scripts/test-all.mjs",
+    "test:static": "node scripts/test-static.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "pg": "^8.16.3",
+    "ws": "^8.18.3",
+    "@aws-sdk/client-s3": "^3.859.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest",
+    "@types/pg": "^8.15.5",
+    "tsx": "^4.20.5",
+    "@types/ws": "^8.18.1",
+    "@types/web-push": "^3.6.4",
+    "@playwright/test": "latest"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
