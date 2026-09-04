@@ -3,6 +3,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  NPM_FLAGS = "--include=dev"
 
 [context.production.environment]
   NODE_ENV = "production"
