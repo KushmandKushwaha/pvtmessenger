@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
+
 import { closeDb, runMigrations } from '../src/lib/db';
 
 async function main(): Promise<void> {
